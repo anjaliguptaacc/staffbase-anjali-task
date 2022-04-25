@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from task_backend_api import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
+    path( 'get_user',views.get_user , name='user'),
+    path('ask_question',views.ask_question ,name='ask'),
+    path('get_questions',views.get_questions,name='getquest'),
+    # path('other_question/<int:user_id>', views.other_question ,name='user'),
+    # path('get_answer/<int:quest_id>', views.get_answer ,name='user'),
+    # path('publish_answer', views.publish_answer ,name='user'),
+    
 ]
